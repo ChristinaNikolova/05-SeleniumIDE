@@ -17,7 +17,11 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 8.0.x
+    - name: Install Chrome
+      run: |
+        sudo apt-get update
+        sudo agt-get install -y google-chrome-stable     
     - name: Restore dependencies
       run: dotnet restore
     - name: Build the app
@@ -34,10 +38,16 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 8.0.x
+    - name: Install Chrome
+      run: |
+        sudo apt-get update
+        sudo agt-get install -y google-chrome-stable     
     - name: Restore dependencies
       run: dotnet restore
     - name: Build the app
       run: dotnet build --no-restore
     - name: Run the tests
+      env: 
+        CHROMEWEBBROUSER: /usr/bin/google-chrome
       run: dotnet test --no-build --verbosity normal
