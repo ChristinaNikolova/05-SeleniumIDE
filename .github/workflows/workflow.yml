@@ -21,7 +21,7 @@ jobs:
     - name: Install Chrome
       run: |
         sudo apt-get update
-        sudo agt-get install -y google-chrome-stable     
+        sudo apt-get install -y google-chrome-stable     
     - name: Restore dependencies
       run: dotnet restore
     - name: Build the app
@@ -42,7 +42,7 @@ jobs:
     - name: Install Chrome
       run: |
         sudo apt-get update
-        sudo agt-get install -y google-chrome-stable     
+        sudo apt-get install -y google-chrome-stable     
     - name: Restore dependencies
       run: dotnet restore
     - name: Build the app
