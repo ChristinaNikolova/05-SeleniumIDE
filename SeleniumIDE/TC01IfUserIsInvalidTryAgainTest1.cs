@@ -26,7 +26,7 @@ public class TC01IfUserIsInvalidTryAgainTest
         options.AddArgument("--disable-gpu");  
         options.AddArgument("--no-sandbox");   
         options.AddArgument("--disable-dev-shm-usage");
-        options.AddArgument("window-size=1920x1080")
+        options.AddArgument("window-size=1920x1080");
         driver = new ChromeDriver(options);
         js = (IJavaScriptExecutor)driver;
         vars = new Dictionary<string, object>();
