@@ -47,7 +47,7 @@ jobs:
       run: dotnet restore
     - name: Build the app
       run: dotnet build --no-restore
-    - name: Run the tests
+    - name: Run the UI tests
       env: 
         CHROMEWEBBROUSER: /usr/bin/google-chrome
       run: dotnet test --no-build --verbosity normal

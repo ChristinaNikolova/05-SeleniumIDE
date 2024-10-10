@@ -17,11 +17,12 @@ public class TC01IfUserIsInvalidTryAgainTest
     private IWebDriver driver;
     public IDictionary<string, object> vars { get; private set; }
     private IJavaScriptExecutor js;
+    private ChromeOptions options;
 
     [SetUp]
     public void SetUp()
     {
-        var options = new ChromeOptions();
+        options = new ChromeOptions();
         options.AddArgument("--headless");
         options.AddArgument("--disable-gpu");  
         options.AddArgument("--no-sandbox");   
